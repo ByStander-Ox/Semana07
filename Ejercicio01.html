@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Medias Queries</title>
+    <style>
+    
+    *,
+    *:before,
+    *::before,
+    *:after,
+    *::after{
+        box-sizing: border-box;
+    }
+    body{margin: 0;}
+   
+    header{
+        background-color: black;
+        height:140px;
+        width: 100%
+    }
+    .main-container{
+        background-color: azure;
+        max-width: 1200px;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        
+        margin-left: auto;
+        margin-right: auto;
+        outline: 1px solid red;
+    }
+    article{
+        max-width:380px;
+        width: 32.203389305%;/*380px*/
+        height:200px ; 
+        background-color: springgreen;
+        margin-bottom: 30px
+        
+
+
+    }
+    .post{
+            display:flex;
+            flex-wrap: wrap;
+            padding-top: 50px
+
+    }
+
+    article:not(:last-child){margin-right: 1.694915254237288%;}/*20px*/
+    
+
+
+
+
+    /* Media Querie */
+
+@media only screen and (max-width:1024px){
+    header{
+         background-color: deeppink;
+     }
+     article{
+         background-color: #000;
+     }
+}
+ @media only screen and (max-width:768px){
+     header{
+         background-color: springgreen;
+     }
+     article{
+         background-color: deepskyblue;
+         width: 100%;
+         
+         
+     }
+     .post{
+         flex-direction: column;
+        align-items: center;}
+ }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header></header>
+    <section class="main-post">
+        <div class="main-container">
+            <div class="post">
+                <article>1</article>
+                <article>2</article>
+                <article>3</article>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+</body>
+</html>
